@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script src="./js/metric.js" defer></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <title>Bot Free</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/icons/botfree.png" alt="logo" />
+            <h2>BotFree</h2>
+        </div>
+        <div class="search">
+            <img src="./assets/icons/search.png" alt="search"/>
+            <p>Search...</p>
+        </div>
+        <div class="profile" style="float:right">
+            <img src="./assets/icons/notification.png" alt="notifications"/>
+            <p>Savannah Nguyen</p>
+            <img src="./assets/icons/avatar.png" alt="profile-pic"/>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="container">
+            <div class="vertical-menu">
+                <a href="./index.html" class="active">
+                    <img src="./assets/icons/home.png" alt="home-icon"/>
+                    Home</a>
+                <a href="./bot-settings.html"><img src="./assets/icons/list.png" alt="bot-settings-icon"/>Bot Settings </a>
+                <a href="#"><img src="./assets/icons/messages.png" alt="messages-icon"/>Messages</a>
+                <a href="#"><img src="./assets/icons/bar-chart.png" alt="analytics-icon"/>Analytics </a>
+                <a href="./history.html"><img src="./assets/icons/history.png" alt="history-icon"/>History</a>
+                <br><br><hr>
+                <div class="integrations">
+                    <h5>INTEGRATIONS</h5>
+                    <a href="#"><img src="./assets/icons/facebook.png" alt="facebook-icon"/>Facebook</a>
+                    <a href="#"><img src="./assets/icons/instagram.png" alt="instagram-icon"/>Instagram</a>
+                    <a href="#"><img src="./assets/icons/twitter.png" alt="twitter-icon"/>Twitter</a>
+                    <button id="popup-button"><img src="./assets/icons/add.png" alt="add-new-icon"/>Add Plugin</button>
+                </div>
+                <br><br><hr><br>
+                <a href="#"><img src="./assets/icons/settings.png" alt="settings-icon"/>Settings</a>
+            </div>   
+        </div>    
+        <div class="home-main-container">
+            <div class="main-items">
+                <div class="cards">
+                    <metric-card
+                        title="Bot Detection Rate"
+                        number="97%"
+                        percentage="+1.5%"
+                        image="./assets/icons/circle.png"
+                        date="Since last week"
+                    ></metric-card>
+                    <metric-card
+                        title="Total Bots Detected"
+                        number="12"
+                        percentage="+1.5%"
+                        image="./assets/icons/total-bots.png"
+                        date="Since last week"
+                    ></metric-card>
+                    <metric-card
+                        title="Bot Removal Rate"
+                        number="99%"
+                        percentage="+0.5%"
+                        image="./assets/icons/removal-rate.png"
+                        date="Since last week"
+                    ></metric-card>
+                    <metric-card
+                        title="Bot Lifespan on Account"
+                        number="4h"
+                        percentage="-1h"
+                        image="./assets/icons/lifespan.png"
+                        date="Since last week"
+                    ></metric-card>
+            </div>
+            <div class="home-charts">
+                <div class="bot-report">
+                    <div class="graph-container">
+                      <div class="title-container">
+                        <h4>Bot Report</h4>
+                        <div class="title-legend">
+                            <div class="line-1">&nbsp;</div>
+                            <p>Current&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <div class="line-2">&nbsp;</div>
+                            <p>Average</p>
+                        </div>
+                        <div class="chart-dropdown">
+                          <select id="timeframe-select">
+                            <option value="6">From last 6 months</option>
+                            <option value="12">From last 12 months</option>
+                            <option value="all">All time</option>
+                          </select>
+                        </div>
+                      </div>
+                      <canvas id="graph"></canvas>
+                    </div>
+                    <script src="./Graphs/bot-report.js"></script>
+                  </div>
+                <div class="stacked-bar-chart">
+                        <div class="stacked-bar-chart-top">
+                            <div class="chart-title">
+                                <h4>Bot Handling</h4>
+                            </div>
+                            <div class="chart-dropdown">
+                                <select id="here">
+                                    <option value="6">From last 6 months</option>
+                                    <option value="12">From last 12 months</option>
+                                    <option value="all">All time</option>
+                                </select>
+                            </div>
+                        </div>
+                    <div class="bar-chart">
+                        <div class="y-axis-numbers">
+                            <p>100%</p>
+                            <p>75%</p>
+                            <p>50%</p>
+                            <p>25%</p>
+                            <p>0%</p>
+                        </div>
+                        <div class="stack-bar-1">
+                            <div class="block-1"></div>
+                            <div class="block-2"></div>
+                            <div class="block-3"></div>
+                            <p>Facebook</p>
+                        </div>
+                        <div class="stack-bar-2">
+                            <div class="block-1"></div>
+                            <div class="block-2"></div>
+                            <div class="block-3"></div>
+                            <p>Instagram</p>
+                        </div>
+                        <div class="stack-bar-3">
+                            <div class="block-1"></div>
+                            <div class="block-2"></div>
+                            <div class="block-3"></div>
+                            <p>Twitter</p>
+                        </div>
+                        <div class="stack-bar-legend">
+                            <div class="legend-blocked">
+                                <div class="circle-legend-blocked"></div>
+                                <p>Blocked</p>
+                            </div>
+                            <div class="legend-removed">
+                                <div class="circle-legend-removed"></div>
+                                <p>Removed</p>
+                            </div>
+                            <div class="legend-hidden">
+                                <div class="circle-legend-hidden"></div>
+                                <p>Hidden</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <script src="./Graphs/stack-bar-chart.js"></script>
+            </div>
+        </div>
+
+        <div id="dark-overlay"></div>
+        <div id="popup-container">
+            <div class="popup-top-row">
+                <h1 id="popup-title">Connect a Social Network</h1>
+                <button id="close-button"><img src="./assets/icons/close.png"/></button>
+            </div>
+            <p id="popup-subheading">Connect your Bot Free account with your social media to start detecting bot activity.</p>
+            <div class="popup-facebook">
+                
+                <div class="popup-left">
+                    <img src="./assets/icons/facebook.png" alt="facbook icon">
+                    <div class="popup-names">
+                        <h5>Facebook</h5>
+                        <p class="username">@Nguyen1</p>
+                    </div>
+                </div>
+                <p>Connected since July 2021</p>
+                <button>Disconnect</button>
+            </div>
+            <div class="popup-instagram">
+                
+                <div class="popup-left">
+                    <img src="./assets/icons/instagram.png" alt="instagram icon">
+                    <div class="popup-names">
+                        <h5>Instagram</h5>
+                        <p class="username">@Nguyen1</p>
+                    </div>
+                </div>
+                <p>Connected since June 2021</p>
+                <button>Disconnect</button>
+            </div>
+            <div class="popup-twitter">
+                <div class="popup-left">
+                    <img src="./assets/icons/twitter.png" alt="twitter icon">
+                    <div class="popup-names">
+                        <h5>Twitter</h5>
+                        <p class="username">@Nguyen1</p>
+                    </div>
+                </div>
+                <p>Connected since March 2021</p>
+                <button>Disconnect</button>
+            </div>
+            <div class="popup-link">
+                <div class="popup-left">
+                    <img src="./assets/icons/linkedin.png" alt="linkedin icon">
+                    <h5>LinkdeIn</h5>
+                </div>
+                <p>Not connected</p>
+                <button>Connect</button>
+            </div>
+            <div class="popup-tiktok">
+                <div class="popup-left">
+                    <img src="./assets/icons/tiktok.png" alt="tiktok icon">
+                    <h5>Tik Tok</h5>
+                </div>
+                <p>Not connected</p>
+                <button>Connect</button>
+            </div>
+            
+        </div>
+        <script src="./js/popup.js"></script>
+        
+    </body>
+    </html>

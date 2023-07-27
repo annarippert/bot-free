@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/history.css">
+  
+  <title>Table Example</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="./assets/icons/botfree.png" alt="logo" />
+        <h2>BotFree</h2>
+    </div>
+    <div class="search">
+        <img src="./assets/icons/search.png" alt="search"/>
+        <p>Search...</p>
+    </div>
+    <div class="profile" style="float:right">
+        <img src="./assets/icons/notification.png" alt="notifications"/>
+        <p>Savannah Nguyen</p>
+        <img src="./assets/icons/avatar.png" alt="profile-pic"/>
+    </div>
+</header>
+<div class="main-container">
+    <div class="container">
+        <div class="vertical-menu">
+            <a href="./index.html" >
+                <img src="./assets/icons/home-inactive.png" alt="home-icon"/>
+                Home</a>
+            <a href="./bot-settings.html"><img src="./assets/icons/list.png" alt="bot-settings-icon"/>Bot Settings </a>
+            <a href="#"><img src="./assets/icons/messages.png" alt="messages-icon"/>Messages</a>
+            <a href="#"><img src="./assets/icons/bar-chart.png" alt="analytics-icon"/>Analytics </a>
+            <a href="./history.html" class="active"><img src="./assets/icons/history-active.png" alt="history-icon"/>History</a>
+            <br><br><hr>
+            <div class="integrations">
+                <h5>INTEGRATIONS</h5>
+                <a href="#"><img src="./assets/icons/facebook.png" alt="facebook-icon"/>Facebook</a>
+                <a href="#"><img src="./assets/icons/instagram.png" alt="instagram-icon"/>Instagram</a>
+                <a href="#"><img src="./assets/icons/twitter.png" alt="twitter-icon"/>Twitter</a>
+                <button id="popup-button"><img src="./assets/icons/add.png" alt="add-new-icon"/>Add Plugin</button>
+            </div>
+            <br><br><hr><br>
+            <a href="#"><img src="./assets/icons/settings.png" alt="settings-icon"/>Settings</a>
+        </div>   
+    </div>  
+    <div class="history-container">
+        <div class="title-row">
+            <h1>History</h1>
+            <div class="title-row-buttons">
+                <button class="customize-button">
+                    <img src="./assets/icons/customize.png" alt="customize">
+                    Customize
+                </button>
+                <button class="export-button">
+                    <img src="./assets/icons/export.png" alt="export">
+                    Export
+                </button>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <div class="name-filter">
+                <label for="name-filter">Filter by name:</label>
+                <input type="text" id="name-filter">
+            </div>
+            <div class="account-filter">
+                <label for="account-filter">Filter by Account:</label>
+                <select id="account-filter">
+                    <option value="account1" selected>All</option>
+                    <option value="account2">Facebook</option>
+                    <option value="account3">Instagram</option>
+                    <option value="account4">Twitter</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="status-filter">
+                <label for="status-filter">Filter by Status:</label>
+                <select id="status-filter">
+                <option value="active">Removed</option>
+                <option value="inactive">Blocked</option>
+                <option value="inactive">Hidden</option>
+                <!-- Add more options as needed -->
+                </select>
+            </div>
+            
+            <div class="button-filter">
+                <label for="clear-filters-btn">Filter by Status:</label>
+                <button id="clear-filters-btn">Clear Filters</button>
+            </div>
+            
+          </div>
+        
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th><input type="checkbox" id="select-all"></th>
+                <th>USER NAME</th>
+                <th>STATUS</th>
+                <th>ACCOUNT</th>
+                <th>DATE</th>
+                <th>TYPE</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- Table rows will be dynamically generated with JavaScript -->
+            </tbody>
+          </table>
+        
+          <div class="pagination">
+            <!-- Pagination elements will be dynamically generated with JavaScript -->
+          </div>
+        
+          <div class="table-summary">
+            <p>Showing 4 rows</p>
+          </div>
+        
+          
+    </div>
+    <script src="./js/history.js"></script>
+</body>
+</html>

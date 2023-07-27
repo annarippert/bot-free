@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/bot-settings.css">
+  <title>Bot Free</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/icons/botfree.png" alt="logo" />
+            <h2>BotFree</h2>
+        </div>
+        <div class="search">
+            <img src="./assets/icons/search.png" alt="search"/>
+            <p>Search...</p>
+        </div>
+        <div class="profile" style="float:right">
+            <img src="./assets/icons/notification.png" alt="notifications"/>
+            <p>Savannah Nguyen</p>
+            <img src="./assets/icons/avatar.png" alt="profile-pic"/>
+        </div>
+    </header>
+    <div class="main-container">
+    <div class="container">
+        <div class="vertical-menu">
+            <a href="./index.html">
+                <img src="./assets/icons/home-inactive.png" alt="home-icon"/>
+                Home</a>
+            <a href="./bot-settings.html" class="active"><img src="./assets/icons/list-active.png" alt="bot-settings-icon"/>Bot Settings </a>
+            <a href="#"><img src="./assets/icons/messages.png" alt="messages-icon"/>Messages</a>
+            <a href="#"><img src="./assets/icons/bar-chart.png" alt="analytics-icon"/>Analytics </a>
+            <a href="./history.html"><img src="./assets/icons/history.png" alt="history-icon"/>History</a>
+            <br><br><hr>
+            <div class="integrations">
+                <h5>INTEGRATIONS</h5>
+                <a href="#"><img src="./assets/icons/facebook.png" alt="facebook-icon"/>Facebook</a>
+                <a href="#"><img src="./assets/icons/instagram.png" alt="instagram-icon"/>Instagram</a>
+                <a href="#"><img src="./assets/icons/twitter.png" alt="twitter-icon"/>Twitter</a>
+                <a href="#"><img src="./assets/icons/add.png" alt="add-new-icon"/>Add Plugin</a>
+            </div>
+            <br><br><hr><br>
+            <a href="#"><img src="./assets/icons/settings.png" alt="settings-icon"/>Settings</a>
+        </div>   
+    </div>    
+    <div class="bot-settings-container">
+        <h1>Bot settings</h1>
+        <div class="question-1">
+            <h4>Manual control or Bot Free's Ml automatic decision-making?</h4>
+            <p>In "Manual" mode, you will have the authority to decide how to handle each flagged bot activity. On the other hand, in "Automatic" mode, the bot activity will be promptly addressed based on decisions made by machine learning algorithms.</p>
+            <table>
+                <tr>
+                    <th>
+                        <h5>Manual</h5>
+                    </th>
+                    <th>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </th>
+                    <th>
+                        <h5>Automatic</h5>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="question-2">
+            <h4>Bot activity to be deleted or hidden from your account(s)?</h4>
+            <p>If you select "delete," the activity will be permanently removed and will not be accessible from any account; it will completely disappear. On the other hand, if you choose "hide," the activity will not be visible to you or others, except for the account on which the comment was originally created.</p>
+            <table>
+                <tr>
+                    <th>
+                        <h5>Delete</h5>
+                    </th>
+                    <th>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </th>
+                    <th>
+                        <h5>Hide</h5>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="question-3">
+            <h4>Automatically report accounts?</h4>
+            <p>Bot activity that engages in harmful or abusive behavior, spread false information, violate community guidelines, or participate in any other form of inappropriate or malicious activity are recommended to be reported. It's essential to report such accounts to maintain a safe and positive online environment for all users.</p>
+            <table>
+                <tr>
+                    <th>
+                        <h5>No</h5>
+                    </th>
+                    <th>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </th>
+                    <th>
+                        <h5>Yes</h5>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <script src="./js/bot-settings.js"></script>
+        <button>Save settings</button>
+    </div>
+    </div>
+    
+</body>
+</html>
