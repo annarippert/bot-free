@@ -1,0 +1,200 @@
+/* Add your styles for the entire page here */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color:#F7F8FA;
+  }
+
+/* Flexbox container for the title row */
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Add any additional styling you want for the title row */
+  }
+  
+  /* Style for the title */
+  .title-row h1 {
+    margin: 0; /* Remove default margin to avoid unwanted spacing */
+  }
+  
+  /* Style for the buttons container */
+  .title-row-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the buttons inside the container */
+  .title-row-buttons button {
+    margin-left: 10px; /* Add some spacing between the buttons */
+    /* Add any additional styling you want for the buttons */
+  }
+  
+  .filter-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .filter-section label,
+  .filter-section select,
+  .filter-section input,
+  .filter-section button {
+    margin-right: 10px;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border:none;
+  }
+  
+  .data-table th,
+  .data-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border:none;
+  }
+  
+  .data-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .data-table tr.current-page {
+    background-color: #ddf;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .table-summary {
+    text-align: left;
+  }
+
+  .history-container{
+    padding:5%;
+    margin-left:10%;
+  }
+
+/* Style the label and input/select elements as block-level elements */
+.name-filter label,
+.account-filter label,
+.status-filter label, 
+.button-filter label{
+  display: block;
+}
+
+.name-filter label,
+.account-filter label,
+.status-filter label {
+    color:#394E75;
+    font-size:16px;
+}
+
+
+.button-filter label{
+    color: #F7F8FA;
+}
+
+
+
+/* Add some spacing between the label and the input/select elements */
+.name-filter label,
+.account-filter label,
+.status-filter label,
+.name-filter input,
+.account-filter select,
+.status-filter select {
+  margin-bottom: 5px;
+  
+}
+
+.name-filter input{
+    width:250px;
+    height:26px; 
+}
+.account-filter select,
+.status-filter select{
+    width:250px;
+    height:32px;
+    color:#9BA6BC;
+    outline: 2px solid #CED3DD;
+}
+
+button{
+    height:32px;
+    border-radius: 4px;
+    margin:8px 16px 8px 16px;
+    color: #9BA6BC;
+    background-color: inherit;
+
+}
+
+.data-table thead tr th{
+    color:#06183A;
+    background-color: inherit;
+    border: 1px solid #D8E4FC;
+    font-weight: lighter;
+    text-align: left;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: small;
+}
+
+.data-table tbody tr{
+    background-color: white;
+    color:#213864;
+    
+}
+.data-table tbody tr td{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+
+  
+.customize-button, .export-button{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button img {
+    width: 16px; /* Adjust the width and height as needed */
+    height: 16px;
+    margin-right: 10px; /* Add some spacing between the icon and the text */
+  }
+
+
+/* .hidden{
+    display: inline-block;
+  padding: 0.5em 1em; /* Adjust padding to make the badge half the size of the cell height 
+} */
+
+hidden { 
+    background-color: #DBFCFF;
+    color: #00C9DB;
+    padding:3% 10% 3% 10%;
+    border-radius: 4px;
+  }
+
+removed { 
+    background-color: #D3FFF0;
+    color: #00C781;
+    padding:3% 10% 3% 10%;
+    border-radius: 4px;
+  }
+
+  blocked { 
+    background-color: #ECF2FE;
+    color: #3C76F1;
+    padding:3% 10% 3% 10%;
+    border-radius: 4px;
+  }

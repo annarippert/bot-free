@@ -1,0 +1,702 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background-color: #F7F8FA;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+.vertical-menu {
+    width: 200px;
+    height: 100vh; 
+    overflow-y: auto;
+    background-color: white;
+    position: fixed;
+    /* top: 0; */
+  left: 0;
+  margin-top:1%;
+  }
+  
+  .vertical-menu a, .vertical-menu button {
+    /* background-color: #FAFAFA; */
+    color: #9BA6BC;
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 15px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  
+  .vertical-menu a:hover, .vertical-menu button:hover {
+    background-color: #EDF1F8;
+    cursor: pointer;
+  }
+  
+  .vertical-menu a.active, .vertical-menu button.active {
+    background-color: #EDF1F8;
+    color: #3C76F1;
+  }
+  
+  .menu-icon {
+    width: 24px; /* Set the desired width of the icon */
+    height: 24px; /* Set the desired height of the icon */
+    margin-right: 10px; /* Add some spacing between the icon and the text */
+  }
+
+.integrations img{
+    width:24px;
+    height:24px;
+}
+
+.vertical-menu img{
+    margin-right:10px;
+}
+
+header, .logo, .search, .profile{
+    display:flex;
+    align-items: center;
+    
+}
+
+.logo{
+    display: flex;
+  align-items: center;
+  margin-left: 1%;
+ }
+
+ .logo img{
+    width:40px;
+    height:40px;
+    margin-right:3%;
+ }
+ 
+ .search{
+     width:65%;
+     background-color:white;
+     outline-color: #ECF1FE;
+     padding-left:1%;
+     margin-right:4%;
+     border-radius: 25px;
+     color: #6391F4;
+ }
+ 
+ .profile{
+    display: flex;
+    align-items: center;
+    width: 20%;
+ }
+ 
+ .profile p{
+     margin-right:5%;
+     margin-left:10%;
+ }
+
+.logo{
+    width:15%;
+    background-color:#FAFAFA;
+}
+
+.search img{
+    width:24px;
+    height:24px;
+    margin-right:5%;
+    align-items: center;
+}
+
+.integrations h5{
+    padding: 12px;
+}
+
+.main-container {
+    margin-top: 60px; /* Add margin to the main container to push content below the fixed header */
+  }
+  
+  hr{
+    color:#CED3DD;
+  }
+
+.home-main-container{
+    padding:2% 5% 5% 15%;
+}
+
+.main-items{
+    width:100%;
+}
+.cards{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+.home-charts{
+    display:flex;
+    /* width:100%; */
+    right:0;
+}
+
+.graph-container {
+    height: 360px;
+    width: 100%; /* Use percentage-based width instead of fixed pixels */
+    min-width: 675px;
+    background-color: white;
+    border-radius: 5px;
+    outline: 3px solid #ecf1fe;
+    margin-left: 1.8%;
+    padding: 20px; /* Add padding for spacing between card and graph */
+  }
+
+  .title-container h4{
+    color:#082253;
+    font-size:20px;
+  }
+
+  .bot-report{
+    padding-right:1%;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+  }
+
+  .title-legend{
+    display:flex;
+    align-items: center;
+    color: #394E75;
+    font-size: 12px;
+  }
+
+  .line-1, .line-2{
+    width:18px;
+    height:4px;
+    border-radius: 4px;
+  }
+
+
+  .line-1{
+    background-color: #213864;
+  }
+
+  .chart-legend {
+    color: blue; /* Change the color of the legend text (use any valid CSS color) */
+    font-size: 14px; /* Change the font size of the legend text (use any valid font size) */
+  }
+
+  .line-2{
+    background-color: #6391F4;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Add margin to create space between title and dropdown */
+  }
+
+  .graph-container h4 {
+    margin: 0; /* Remove default margin to control spacing manually */
+    padding-left: 20px; /* Add left padding for the title */
+    padding-top: 10px; /* Add top padding for the title */
+  }
+
+.stacked-bar-chart {
+    flex: 1;
+    height: 400px;
+    width:100%; /* Use percentage-based width instead of fixed pixels */
+    min-width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    outline: 3px solid #ECF1FE;
+    margin-left: 2%;
+    padding-left: 2%;
+    margin-right: 2%;
+    padding-right: 2%;
+    position: relative;
+}
+
+.stacked-bar-chart-top {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-top:5%;
+    margin-bottom:10%;
+    justify-content: space-between;
+}
+
+.stacked-bar-chart-top .chart-title {
+    padding-right: 20px; /* Add some spacing between title and dropdown */
+}
+
+.chart-dropdown select{
+    color:#9BA6BC;
+    border: 1px solid #CED3DD;
+    margin-right: 1px; 
+    padding:4px;
+}
+
+.custom-tooltip {
+    height:4px;
+    width:18px;
+    border-radius: 4px; /* Set the desired border-radius value */
+    /* Add any other custom styles you want for the legend container */
+  }
+
+.stacked-bar-chart-top h4 {
+    font-size: 20px;
+    margin: 0; /* Remove default margin to avoid extra space */
+}
+
+
+.stack-bar-legend{
+    /* margin-right:50px; */
+    top: 0px; /* Adjust the top position to move the legend down */
+    right: 20px; /* Adjust the right position to move the legend left */
+    display: flex;
+    flex-direction: column;
+    padding-right:25%;
+    color: #394E75;
+    font-size: 12px;
+    /* width:200px; */
+}
+
+.bar-chart:not(.stack-bar-legend){
+    display:flex;
+    gap:20px;
+}
+
+
+.y-axis-numbers{
+    text-align: right;
+    color:#9BA6BC;
+}
+
+.y-axis-numbers p{
+    height:12%;
+}
+
+.stack-bar-1, .stack-bar-2, .stack-bar-3{
+    text-align: center;
+    color:#9BA6BC;
+}
+.stack-bar-1 .block-1{
+    width:70px;
+    height:35px;
+    background-color: #D5D8E7;
+    transition: height 0.5s ease;
+    
+}
+
+.stack-bar-1 .block-2{
+    width:70px;
+    height:90px;
+    background-color: #AAB5E9;
+    transition: height 0.5s ease;
+}
+
+.stack-bar-1 .block-3{
+    width:70px;
+    height:110px;
+    background-color: #3D5AF1;
+    transition: height 0.5s ease;
+}
+.stack-bar-2 .block-1{
+    width:70px;
+    height:50px;
+    background-color: #D5D8E7;
+    transition: height 0.5s ease;
+    
+}
+
+.stack-bar-2 .block-2{
+    width:70px;
+    height:140px;
+    background-color: #AAB5E9;
+    transition: height 0.5s ease;
+}
+
+.stack-bar-2 .block-3{
+    width:70px;
+    height:45px;
+    background-color: #3D5AF1;
+    transition: height 0.5s ease;
+}
+
+.stack-bar-3 .block-1{
+    width:70px;
+    height:10px;
+    background-color: #D5D8E7;
+    transition: height 0.5s ease;
+    
+}
+
+.stack-bar-3 .block-2{
+    width:70px;
+    height:30px;
+    background-color: #AAB5E9;
+    transition: height 0.5s ease;
+}
+
+.stack-bar-3 .block-3{
+    width:70px;
+    height:195px;
+    background-color: #3D5AF1;
+    transition: height 0.5s ease;
+}
+.circle-legend-blocked,
+.circle-legend-removed,
+.circle-legend-hidden {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+/* Add background color for each circle */
+.circle-legend-blocked {
+    background-color: #3D5AF1;
+}
+
+.circle-legend-removed {
+    background-color: #AAB5E9;
+}
+
+.circle-legend-hidden {
+    background-color: #D5D8E7;
+}
+
+/* Adjust the legend-blocked and legend-removed to align with other legends */
+.legend-blocked,
+.legend-removed,
+.legend-hidden {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.legend-blocked p, .legend-removed p, .legend-hidden p{
+    margin-left:5%;
+}
+/* 
+.tooltip {
+    position: absolute;
+    display: none;
+    background-color: #071F4B;
+    color:white;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+  } */
+
+  
+  .axis-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 5px solid white;
+  }
+
+  
+  .legend-text {
+    font-size: 14px;
+  }
+
+  .custom-tooltip {
+    z-index: 9999;
+    font-size: 14px;
+  }
+
+#popup-button{
+    background-color: inherit;
+    border:none;
+    cursor: pointer;
+}
+
+#popup-title{
+    font-size:20px;
+    /* font-weight:lighter; */
+}
+
+#popup-subheading{
+    font-size: 15px;
+    padding-bottom: 5%;
+    margin-top: 1%;
+}
+
+.username{
+    /* padding-top:-2%; */
+    color:#9BA6BC;
+    font-weight: lighter;
+    padding-bottom: 15%;
+}
+
+ 
+.popup-top-row, .popup-facebook, .popup-instagram, .popup-twitter, .popup-link, .popup-tiktok{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-facebook, .popup-instagram, .popup-twitter, .popup-link, .popup-tiktok{
+    border: 1px solid #9BA6BC;
+    margin-bottom: 2%;
+    padding-left:5%;
+    padding-right:5%;
+    align-items: center;
+}
+
+.popup-facebook img, .popup-instagram img, .popup-twitter img, .popup-link img, .popup-tiktok img{
+    width:40px;
+    height:40px;
+}
+
+.popup-facebook button, .popup-instagram button, .popup-twitter button, .popup-link button, .popup-tiktok button{
+    background-color: #3C76F1;
+    color: #FAFAFA;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:16px;
+    border: 1px solid #3C76F1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-facebook p:not(.username) , .popup-instagram p:not(.username), .popup-twitter p:not(.username), .popup-link p:not(.username), .popup-tiktok p:not(.username){
+    color:#9BA6BC;
+    font-size:12px;
+    font-style: italic;
+}
+
+.popup-left{
+    display:flex;
+    align-items: center;
+}
+
+.popup-left img{
+    padding-right: 25px;
+}
+
+.popup-facebook h5, .popup-instagram h5, .popup-twitter h5 {
+    font-size:15px;
+    text-align: left;
+    padding-bottom: 0px;
+    margin-bottom: 3px;
+}
+.popup-link h5, .popup-tiktok h5{
+    font-size:15px;
+    text-align: left;
+}
+
+.username {
+    color: #9BA6BC;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 0; /* Remove default margin to make the spacing closer */
+}
+
+    /* Styling for the dark overlay */
+    #dark-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* 0.5 opacity for a semi-transparent dark effect */
+        z-index: 1;
+      }
+  
+      #close-button{
+        border:none;
+        cursor: pointer;
+      }
+
+      
+
+      /* Styling for the pop-up container */
+      #popup-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        z-index: 2;
+      }
+
+      canvas#graph {
+        /* Set the width and height of the chart canvas */
+        width: 100%;
+        height: 200px; /* Set the desired height of the chart */
+      }
+
+/* 
+header, .logo, .search, .profile, #menu-home, #menu-bot-settings, #menu-messages, #menu-analytics, #menu-history, #menu-integrations-facebook, #menu-integrations-instagram, #menu-integrations-twitter, #menu-integrations-new, #menu-settings{
+    display:flex;
+    align-items: center;
+    
+}
+
+.logo{
+   margin-left:2%; 
+   width:5%;
+}
+
+.search{
+    width:70%;
+    background-color:#F7F8FA;
+    outline-color: #092e8b;
+    padding-left:2%;
+    border-radius: 25px;
+    color: #6391F4;
+    
+}
+
+.profile{
+    width:20%;
+}
+
+.profile p{
+    margin-right:5%;
+    margin-left:10%;
+}
+
+#menu-home img, #menu-bot-settings img, #menu-messages img, #menu-analytics img, #menu-history img, #menu-integrations-facebook img, #menu-integrations-instagram img, #menu-integrations-twitter img, #menu-integrations-new img, #menu-settings img{
+    margin-left:10%;
+}
+
+.menu, .logo{
+    width:15%;
+    background-color:#FAFAFA; */
+    /* padding-left:1%; 
+    color: #9BA6BC;
+}
+
+img{
+    width:24px;
+    height:24px;
+    margin-right:5%;
+    align-items: center;
+}
+
+#menu-home{
+    background-color:#EDF1F8;
+    color: #3C76F1;
+}
+ 
+#active{
+    /* background-color:#3C76F1;
+    width:10%; 
+    height: 58px;
+    width: 10px;
+    background-color: #3C76F1;
+    font-weight:bold;
+} 
+
+.container {
+    display:flex;
+}
+
+.main-items{
+    background-color:red;
+    width:100%;
+}
+.cards{
+    display:flex;
+    justify-content: space-between;
+    width:95%;
+}
+
+  
+  .tooltip {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+  }
+
+  #graphTitle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .axis-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .legend-text {
+    font-size: 14px;
+  }
+
+  /*graphs
+  .bot-report{
+    background-color:#FAFAFA;
+    /* margin:5%; 
+    border-radius:5px;
+    outline: 3px solid #ECF1FE;
+    
+    width:60%;
+  }
+  #graph-container{
+    width:60%;
+    padding:2%;
+  }
+
+  a {
+    color: inherit; /* blue colors for links too 
+    text-decoration: inherit; /* no underline 
+  } */
